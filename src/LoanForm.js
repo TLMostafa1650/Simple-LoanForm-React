@@ -68,6 +68,10 @@ export default function LoanForm() {
     return;
   }
   
+  if (!/^\d+$/.test(info.phone)) {
+    showError("Invalid Phone", "Only digits are allowed");
+    return;
+  }
 
     isModelVisible ? setisModelVisible(false) : setisModelVisible(true);
   
